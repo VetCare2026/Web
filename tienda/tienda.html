@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - VetCare</title>
+    <link rel="stylesheet" href="tienda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="tienda-header">
+        <h1>Nuestro Catálogo</h1>
+        <p>Encuentra lo mejor para tus mascotas</p>
+    </header>
+
+    <div class="tienda-container">
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <ul>
+                <li><a href="#" onclick="filtrarProductos('todos')">Todos</a></li>
+                <li><a href="#" onclick="filtrarProductos('Alimentación')">Alimentación</a></li>
+                <li><a href="#" onclick="filtrarProductos('Limpieza')">Limpieza</a></li>
+                <li><a href="#" onclick="filtrarProductos('Juguetes')">Juguetes</a></li>
+                <li><a href="#" onclick="filtrarProductos('Cuidados')">Cuidados</a></li>
+            </ul>
+        </aside>
+
+        <main class="catalogo-grid">
+            <!-- Los productos se cargan dinámicamente aquí -->
+        </main>
+    </div>
+
+    <script src="tienda.js"></script>
+</body>
+</html>
