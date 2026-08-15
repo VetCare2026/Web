@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - VetCare Premium</title>
+    
+    <!-- Enlace al archivo CSS de estilos -->
+    <link rel="stylesheet" href="contacto.css">
+    
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header class="main-header">
+        <div class="header-content">
+            <span class="badge">Estamos para ayudarte</span>
+            <h1>Contáctanos</h1>
+            <p>Comunícate con nosotros a través de nuestras redes sociales o envíanos un mensaje directo.</p>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        
+        <!-- Tarjetas de Redes Sociales y Comunicación -->
+        <div class="social-grid">
+            
+            <!-- WhatsApp -->
+            <a href="https://chat.whatsapp.com/DPaBUyf6cbuBgIT8KZkjf7" target="_blank" class="social-card whatsapp">
+                <div class="social-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <p>Escríbenos al instante para citas y consultas rápidas.</p>
+                <span class="social-link-text">Abrir Chat &rarr;</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/diegofrank_x20x/" target="_blank" class="social-card instagram">
+                <div class="social-icon">📸</div>
+                <h3>Instagram</h3>
+                <p>Síguenos y mira las fotos de nuestros pacientes felices.</p>
+                <span class="social-link-text">Ver Perfil &rarr;</span>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://x.com/Frankx20x262927" target="_blank" class="social-card twitter">
+                <div class="social-icon">🐦</div>
+                <h3>Twitter</h3>
+                <p>Entérate de nuestras últimas noticias y consejos diarios.</p>
+                <span class="social-link-text">Seguir &rarr;</span>
+            </a>
+
+        </div>
+
+        <!-- Formulario de Contacto -->
+        <div class="contact-form-section">
+            <h2>Envíanos un mensaje</h2>
+            <p>Déjanos tus datos y nos pondremos en contacto contigo lo antes posible.</p>
+            
+            <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!');">
+                <div class="form-group">
+                    <label for="nombre">Tu Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico o Teléfono</label>
+                    <input type="text" id="email" placeholder="Ej. correo@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Tu Mensaje</label>
+                    <textarea id="mensaje" rows="4" placeholder="¿En qué podemos ayudar a tu mascota?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <!-- Botón para regresar al inicio -->
+        <div class="back-home">
+            <!-- Recuerda que si tu página principal se llama servicio.html, puedes cambiar index.html por servicio.html -->
+            <a href="servicio.html" class="btn-home">🏠 Volver al Inicio</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
