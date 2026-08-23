@@ -3,48 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinaria</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Reservar Cita - VetCare</title>
+    <link rel="stylesheet" href="style-reserva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">VetCare</div>
-        <nav class="nav-links">
-            <a href="index.html">Inicio</a>
-            <a href="Servicios/servicio.html">Servicios</a>
-            <a href="Tianda/tienda.html">Tienda</a>
-            <a href="Contacto/contacto.html">Contacto</a>
-        </nav>
-        <a href="reserva/reserva.html" class="btn-cita"><i class="fa-solid fa-calendar-days"></i> Reservar cita</a>
-    </header>
-
-    <div class="hero-box">
-        <h1>Bienvenido a nuestra Veterinaria</h1>
-        <p>Aquí encontrarás los mejores cuidados para tu mascota.</p>
-        <p>Contacto: VetCare@gmail.com</p>
-    </div>
-
-    <div class="icon-container">
-        <a href="C.V.C.E/Consulta Veterinaria/Consulta.html" class="icon-item">
-            <i class="fas fa-user-md"></i>
-            <span>Consulta Veterinaria</span>
-        </a>
-        <a href="C.V.C.E/Vacunacion/vacunacion.html" class="icon-item">
-            <i class="fas fa-syringe"></i>
-            <span>Vacunación</span>
-        </a>
-        <a href="C.V.C.E/Cuidado y Bienestar/cuidado.html" class="icon-item">
-            <i class="fas fa-heart"></i>
-            <span>Cuidado y Bienestar</span>
-        </a>
-        <a href="C.V.C.E/Emergencias/emergencia.html" class="icon-item">
-            <i class="fas fa-ambulance"></i>
-            <span>Emergencias 24/7</span>
+    <!-- Botón para Volver al Inicio -->
+    <div style="max-width: 600px; margin: 20px auto 0 auto; padding: 0 20px;">
+        <a href="index.html" class="btn-volver-inicio" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: #ffffff; color: #0d9488; padding: 10px 20px; border-radius: 30px; font-weight: 600; font-family: 'Poppins', sans-serif; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: background 0.3s ease;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Volver al Inicio
         </a>
     </div>
 
+    <div class="form-container">
+        <h1>Reservar una Cita</h1>
+        <!-- Formulario configurado para enviar datos a tu hoja de cálculo -->
+        <form action="https://docs.google.com/spreadsheets/d/157NHpFcvEeqprsYAyFp6iUqc6c7HgRTj0xbi03-IeEc/edit?usp=sharing" method="POST">
+            
+            <label for="nombre">Nombre del dueño:</label>
+            <input type="text" id="nombre" name="nombreDueno" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="nombre-mascota">Nombre de la mascota:</label>
+            <input type="text" id="nombre-mascota" name="nombreMascota" required>
+
+            <label for="tipo-mascota">Tipo de mascota:</label>
+            <input type="text" id="tipo-mascota" name="tipoMascota" required>
+
+            <label for="fecha">Fecha de la cita:</label>
+            <input type="date" id="fecha" name="fechaCita" required>
+
+            <label for="hora">Hora de la cita:</label>
+            <input type="time" id="hora" name="horaCita" required>
+
+            <label for="detalles">Detalles adicionales:</label>
+            <textarea id="detalles" name="detalleAdicional" rows="4"></textarea>
+
+            <button type="submit">Confirmar Reserva</button>
+        </form>
+    </div>
+
+    <!-- Vínculo con tu archivo de JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
