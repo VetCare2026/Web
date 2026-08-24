@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Urgencia - Vetcare 24/7</title>
+    <link rel="stylesheet" href="cita_emergencia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Encabezado Estético -->
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="logo">Vet<span>care</span> 🚨</h1>
+        </div>
+        <nav class="nav">
+            <a href="../../../index.html"> ( Inicio ) </a>
+            <a href="../emergencia.html"> ( Emergencias ) </a>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal - Formulario de Emergencia -->
+    <main class="main-content">
+        
+        <section class="form-hero">
+            <div class="badge-tag alert-tag">SISTEMA DE ALERTA INMEDIATA</div>
+            <h2>Registro de Admisión por Emergencia</h2>
+            <p>Completa los siguientes datos con rapidez para preparar el quirófano y al personal de guardia antes de que llegues al centro veterinario.</p>
+        </section>
+
+        <section class="card form-container">
+            <form id="emergency-form">
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="propietario">Nombre del Propietario / Responsable</label>
+                        <input type="text" id="propietario" required placeholder="Ej. Carlos Mendoza">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono de Contacto Directo</label>
+                        <input type="tel" id="telefono" required placeholder="Ej. 0991234567">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="paciente">Nombre de la Mascota / Animal</label>
+                        <input type="text" id="paciente" required placeholder="Ej. Apolo o Vaca #42">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="especie">Especie o Tipo de Animal</label>
+                        <select id="especie" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Canino">Canino (Perro)</option>
+                            <option value="Felino">Felino (Gato)</option>
+                            <option value="Exotico">Exótico / Silvestre (Ave, Reptil, etc.)</option>
+                            <option value="Bovino_Equino">Bovino / Equino (Ganado o Caballo)</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="gravedad">Nivel de Gravedad (Triaje)</label>
+                        <select id="gravedad" required>
+                            <option value="" disabled selected>Selecciona el nivel de urgencia</option>
+                            <option value="Rojo">🔴 Código Rojo (Crítico / Paro / Hemorragia profusa)</option>
+                            <option value="Naranja">🟠 Código Naranja (Urgente / Convulsiones / Envenenamiento)</option>
+                            <option value="Amarillo">🟡 Código Amarillo (Dolor agudo / Herida moderada)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tiempo">¿Hace cuánto tiempo ocurrió?</label>
+                        <input type="text" id="tiempo" required placeholder="Ej. Hace 15 minutos">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="sintomas">Descripción Breve del Cuadro Clínico / Síntomas</label>
+                    <textarea id="sintomas" rows="4" required placeholder="Describe los síntomas críticos, si ingirió algún tóxico o si sufrió un accidente..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-reserva btn-emergency-submit">
+                    <span>Activar Alerta y Enviar Datos</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+
+            </form>
+
+            <!-- Mensaje de éxito oculto inicialmente -->
+            <div id="success-message" class="success-box hidden">
+                <h3>🚨 ¡Alerta de Emergencia Registrada con Éxito!</h3>
+                <p>Nuestros médicos de guardia y quirófano acaban de recibir tus datos. <strong>Ven en camino de inmediato</strong> o mantén la línea abierta para recibir instrucciones de soporte pre-clínico.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2026 Vetcare. Unidad de Cuidados Críticos y Emergencias Veterinarias 24/7.</p>
+    </footer>
+
+    <!-- Script vinculado -->
+    <script src="cita_emergencia.js"></script>
+</body>
+</html>
